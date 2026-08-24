@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جملہ کلیکشن - اسلامی دعائیں اور نماز</title>
+    <style>
+        :root {
+            --primary: #047857;
+            --secondary: #065f46;
+            --accent: #10b981;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-color: #1f2937;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 15px;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .section-title {
+            font-size: 18px;
+            color: var(--secondary);
+            margin: 15px 0 10px 0;
+            font-weight: bold;
+            border-right: 4px solid var(--accent);
+            padding-right: 8px;
+        }
+        /* Namaz Timing Card */
+        .namaz-card {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        .time-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 15px;
+        }
+        .time-row:last-child {
+            border-bottom: none;
+        }
+        /* Dua Cards */
+        .dua-card {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 12px;
+            transition: transform 0.2s;
+        }
+        .dua-card:active {
+            transform: scale(0.98);
+        }
+        .dua-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .dua-arabic {
+            font-size: 18px;
+            color: #111827;
+            text-align: right;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        .dua-translation {
+            font-size: 14px;
+            color: #4b5563;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>جملہ کلیکشن</h1>
+        <p>خوبصورت اسلامی دعائیں، اذکار اور نماز کے اوقات</p>
+    </header>
+
+    <!-- Namaz Timings Section -->
+    <div class="section-title">نماز کے اوقات (آج کا دن)</div>
+    <div class="namaz-card" id="namaz-timings">
+        <div class="time-row"><span>فجر</span><span id="fajr">لوڈ ہو رہا ہے...</span></div>
+        <div class="time-row"><span>ظہر</span><span id="dhuhr">لوڈ ہو رہا ہے...</span></div>
+        <div class="time-row"><span>عصر</span><span id="asr">لوڈ ہو رہا ہے...</span></div>
+        <div class="time-row"><span>مغرب</span><span id="maghrib">لوڈ ہو رہا ہے...</span></div>
+        <div class="time-row"><span>عشاء</span><span id="isha">لوڈ ہو رہا ہے...</span></div>
+    </div>
+
+    <!-- Jumla / Dua Collection Section -->
+    <div class="section-title">مقبول دعائیں اور جملے</div>
+    
+    <div class="dua-card">
+        <div class="dua-title">صبح و شام کا ذکر</div>
+        <div class="dua-arabic">رَضِيتُ بِاللَّهِ رَبًّا، وَبِالإِسْلَامِ دِينًا، وَبِمُحَمَّدٍ نَبِيًّا</div>
+        <div class="dua-translation">ترجمہ: میں راضی ہوا اللہ کے رب ہونے پر، اسلام کے دین ہونے پر اور محمد ﷺ کے نبی ہونے پر۔</div>
+    </div>
+
+    <div class="dua-card">
+        <div class="dua-title">پریشانی کی دعا</div>
+        <div class="dua-arabic">لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ</div>
+        <div class="dua-translation">ترجمہ: تیرے سوا کوئی معبود نہیں، تو پاک ہے، بےشک میں ظالموں میں سے تھا۔</div>
+    </div>
+
+    <div class="dua-card">
+        <div class="dua-title">گھر سے نکلنے کی دعا</div>
+        <div class="dua-arabic">بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ</div>
+        <div class="dua-translation">ترجمہ: اللہ کا نام لے کر، میں نے اللہ پر بھروسہ کیا، گناہوں سے بچنے کی طاقت اور نیکی کرنے کی توفیق اللہ ہی کی طرف سے ہے۔</div>
+    </div>
+
+    <div class="dua-card">
+        <div class="dua-title">بخشش اور مغفرت کی دعا</div>
+        <div class="dua-arabic">رَبِّ اغْفِرْ وَارْحَمْ وَأَنْتَ خَيْرُ الرَّاحِمِينَ</div>
+        <div class="dua-translation">ترجمہ: اے میرے رب! بخش دے اور رحم فرما، اور تو سب سے بہتر رحم کرنے والا ہے۔</div>
+    </div>
+
+    <footer>
+        <p>© جملہ کلیکشن - تمام حقوق محفوظ ہیں</p>
+    </footer>
+
+    <script>
+        // Fetching Prayer Times based on user's location automatically
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(position => {
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+                const date = new Date().toISOString().split('T')[0];
+                
+                fetch(`https://api.aladhan.com/v1/timings/${date}?latitude=${lat}&longitude=${lon}&method=2`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const timings = data.data.timings;
+                        document.getElementById('fajr').innerText = timings.Fajr;
+                        document.getElementById('dhuhr').innerText = timings.Dhuhr;
+                        document.getElementById('asr').innerText = timings.Asr;
+                        document.getElementById('maghrib').innerText = timings.Maghrib;
+                        document.getElementById('isha').innerText = timings.Isha;
+                    })
+                    .catch(() => {
+                        setDefaultTimes();
+                    });
+            }, () => {
+                setDefaultTimes();
+            });
+        } else {
+            setDefaultTimes();
+        }
+
+        function setDefaultTimes() {
+            document.getElementById('fajr').innerText = "05:00 AM";
+            document.getElementById('dhuhr').innerText = "01:30 PM";
+            document.getElementById('asr').innerText = "05:15 PM";
+            document.getElementById('maghrib').innerText = "06:40 PM";
+            document.getElementById('isha').innerText = "08:15 PM";
+        }
+    </script>
+</body>
+</html>
