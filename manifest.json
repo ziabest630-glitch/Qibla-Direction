@@ -4,9 +4,9 @@
   "display": "standalone",
   "name": "Jumla Collection",
   "orientation": "any",
-  "scope": "/",
+  "scope": "/Qibla-Direction/"
   "short_name": "Jumla",
-  "start_url": "/",
+  "start_url": "/Qibla-Direction/index.html"
   "theme_color": "#ffffff",
   "id": "com.jumla.collection ",
   "description": "Islamic quotes,Dua and prayers"
